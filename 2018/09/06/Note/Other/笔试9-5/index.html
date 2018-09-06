@@ -3,26 +3,29 @@
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     
-    <title>标准库与字符串 | Agt Wiki</title>
+    <title>常见题目Part1 | Agt Wiki</title>
     
     
-        <meta name="keywords" content="C++" />
+        <meta name="keywords" content="笔试" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="C++ Primer, 5th Edition作者: Stanley B. Lippman / Josée Lajoie / Barbara E. Moo   标准库命名空间 使用using namespace::name;可以声明特定的名字 头文件不应包含using声明，否则容易引起名字冲突   string 类型标准库类型 string表示可变长的字符序列 初始化stringstring s1">
-<meta name="keywords" content="C++">
+    <meta name="description" content="1. 不可能的出栈顺序（数据结构） 一个栈的入栈序列为ABCDE，则不可能的出栈序列为?(1). ECDBA  (2). DCEAB  (3). DECBA  (4). ABCDE  (5). EDCBA  答案：(1),(2) 根据栈后进先出（LIFO）的特性，在入栈序列中位置偏后的元素首先出栈意味着在入栈序列中位于它前面的元素都还在栈中，因此这些元素只能按照逆序弹出 由此，若D首先出栈，则栈中">
+<meta name="keywords" content="笔试">
 <meta property="og:type" content="article">
-<meta property="og:title" content="标准库与字符串">
-<meta property="og:url" content="http://yoursite.com/2018/08/07/Note/C++ Primer/C3 字符串、向量和数组/index.html">
+<meta property="og:title" content="常见题目Part1">
+<meta property="og:url" content="http://yoursite.com/2018/09/06/Note/Other/笔试9-5/index.html">
 <meta property="og:site_name" content="Agt Wiki">
-<meta property="og:description" content="C++ Primer, 5th Edition作者: Stanley B. Lippman / Josée Lajoie / Barbara E. Moo   标准库命名空间 使用using namespace::name;可以声明特定的名字 头文件不应包含using声明，否则容易引起名字冲突   string 类型标准库类型 string表示可变长的字符序列 初始化stringstring s1">
+<meta property="og:description" content="1. 不可能的出栈顺序（数据结构） 一个栈的入栈序列为ABCDE，则不可能的出栈序列为?(1). ECDBA  (2). DCEAB  (3). DECBA  (4). ABCDE  (5). EDCBA  答案：(1),(2) 根据栈后进先出（LIFO）的特性，在入栈序列中位置偏后的元素首先出栈意味着在入栈序列中位于它前面的元素都还在栈中，因此这些元素只能按照逆序弹出 由此，若D首先出栈，则栈中">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/12312259-51b5a9d9f53a9e3d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-08-30T08:34:15.969Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/12312259-ae225c5b90d37a6b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/12312259-22aa3f1cb67c6e68.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/12312259-fa82c078c1f7e94a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/12312259-b078ecba0824335b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-09-06T09:20:07.403Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="标准库与字符串">
-<meta name="twitter:description" content="C++ Primer, 5th Edition作者: Stanley B. Lippman / Josée Lajoie / Barbara E. Moo   标准库命名空间 使用using namespace::name;可以声明特定的名字 头文件不应包含using声明，否则容易引起名字冲突   string 类型标准库类型 string表示可变长的字符序列 初始化stringstring s1">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/12312259-51b5a9d9f53a9e3d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="常见题目Part1">
+<meta name="twitter:description" content="1. 不可能的出栈顺序（数据结构） 一个栈的入栈序列为ABCDE，则不可能的出栈序列为?(1). ECDBA  (2). DCEAB  (3). DECBA  (4). ABCDE  (5). EDCBA  答案：(1),(2) 根据栈后进先出（LIFO）的特性，在入栈序列中位置偏后的元素首先出栈意味着在入栈序列中位于它前面的元素都还在栈中，因此这些元素只能按照逆序弹出 由此，若D首先出栈，则栈中">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/12312259-ae225c5b90d37a6b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
     
 
     
@@ -218,7 +221,7 @@
                             &nbsp;
                             Engineer
                         </a>
-                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../../../../../07/02/Engineer/OpenCV-环境搭建/">OpenCV C++环境搭建</a></li>  <li class="file"><a href="../../../../05/Engineer/归并排序/">归并排序</a></li>  </ul> 
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../../../../../07/02/Engineer/OpenCV-环境搭建/">OpenCV C++环境搭建</a></li>  <li class="file"><a href="../../../../../08/05/Engineer/归并排序/">归并排序</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory open">
@@ -228,22 +231,22 @@
                             Note
                         </a>
                          <ul class="unstyled" id="tree" > 
-                    <li class="directory open">
-                        <a href="#" data-role="directory">
-                            <i class="fa fa-folder-open"></i>
-                            &nbsp;
-                            C++ Primer
-                        </a>
-                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../../../../06/Note/C++ Primer/C1&2变量和基本类型/">变量和基本类型</a></li>  <li class="file active"><a href="">标准库与字符串</a></li>  </ul> 
-                    </li> 
-                    
                     <li class="directory">
                         <a href="#" data-role="directory">
                             <i class="fa fa-folder"></i>
                             &nbsp;
+                            C++ Primer
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../../../../../08/06/Note/C++ Primer/C1&2变量和基本类型/">变量和基本类型</a></li>  <li class="file"><a href="../../../../../08/07/Note/C++ Primer/C3 字符串、向量和数组/">标准库与字符串</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
                             Other
                         </a>
-                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../../../../../09/06/Note/Other/笔试9-5/">常见题目Part1</a></li>  </ul> 
+                         <ul class="unstyled" id="tree" >  <li class="file active"><a href="">常见题目Part1</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -261,7 +264,7 @@
                             &nbsp;
                             汇编语言
                         </a>
-                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../../../../02/Note/汇编语言/第5章 [BX]和loop指令/">loop指令和使用[BX]访问内存</a></li>  </ul> 
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../../../../../08/02/Note/汇编语言/第5章 [BX]和loop指令/">loop指令和使用[BX]访问内存</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -270,7 +273,7 @@
                             &nbsp;
                             算法导论
                         </a>
-                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../../../../03/Note/算法导论/C1算法基础/">算法基础</a></li>  <li class="file"><a href="../../算法导论/C3函数的增长/">函数的增长</a></li>  </ul> 
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../../../../../08/03/Note/算法导论/C1算法基础/">算法基础</a></li>  <li class="file"><a href="../../../../../08/07/Note/算法导论/C3函数的增长/">函数的增长</a></li>  </ul> 
                     </li> 
                      </ul> 
                     </li> 
@@ -363,7 +366,7 @@
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
             
-            <section id="main"><article id="post-Note/C++ Primer/C3 字符串、向量和数组" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-Note/Other/笔试9-5" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -373,20 +376,20 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="../../../../../../categories/Note/">Note</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="../../../../../../categories/Note/C-Primer/">C++ Primer</a>
+        <a class="article-category-link" href="../../../../../../categories/Note/">Note</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="../../../../../../categories/Note/Other/">Other</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="../../../../../../tags/C/">C++</a>
+        <a class="tag-link" href="../../../../../../tags/笔试/">笔试</a>
     </div>
 
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
         <a href="">
-            <time datetime="2018-08-07T04:17:30.000Z" itemprop="datePublished">2018-08-07</time>
+            <time datetime="2018-09-06T02:21:22.000Z" itemprop="datePublished">2018-09-06</time>
         </a>
     </div>
 
@@ -397,13 +400,13 @@
                         
                         
                             <div class="article-meta-button">
-                                <a href='https://github.com/agt/Wiki-site/raw/writing/source/_posts/Note/C++ Primer/C3 字符串、向量和数组.md'> Source </a>
+                                <a href='https://github.com/agt/Wiki-site/raw/writing/source/_posts/Note/Other/笔试9-5.md'> Source </a>
                             </div>
                             <div class="article-meta-button">
-                                <a href='https://github.com/agt/Wiki-site/edit/writing/source/_posts/Note/C++ Primer/C3 字符串、向量和数组.md'> Edit </a>
+                                <a href='https://github.com/agt/Wiki-site/edit/writing/source/_posts/Note/Other/笔试9-5.md'> Edit </a>
                             </div>
                             <div class="article-meta-button">
-                                <a href='https://github.com/agt/Wiki-site/commits/writing/source/_posts/Note/C++ Primer/C3 字符串、向量和数组.md'> History </a>
+                                <a href='https://github.com/agt/Wiki-site/commits/writing/source/_posts/Note/Other/笔试9-5.md'> History </a>
                             </div>
                         
                     </div>
@@ -411,7 +414,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            标准库与字符串
+            常见题目Part1
         </h1>
     
 
@@ -424,44 +427,46 @@
             
                 <div id="toc" class="toc-article">
                 <strong class="toc-title">文章目錄</strong>
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#标准库命名空间"><span class="toc-number">1.</span> <span class="toc-text">标准库命名空间</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#string-类型"><span class="toc-number">1.1.</span> <span class="toc-text">string 类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#初始化string"><span class="toc-number">1.1.1.</span> <span class="toc-text">初始化string</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#string类的常用函数"><span class="toc-number">1.1.2.</span> <span class="toc-text">string类的常用函数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#string-size-type类型"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">string::size_type类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#字面值和string对象相加"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">字面值和string对象相加</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#处理string对象中的单个字符"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">处理string对象中的单个字符</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#字符处理函数"><span class="toc-number">1.1.2.3.1.</span> <span class="toc-text">字符处理函数</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#range-for-语句"><span class="toc-number">1.1.2.3.2.</span> <span class="toc-text">$range for$ 语句</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-不可能的出栈顺序（数据结构）"><span class="toc-number">1.</span> <span class="toc-text">1. 不可能的出栈顺序（数据结构）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-限制对象在栈上初始化（C-）"><span class="toc-number">2.</span> <span class="toc-text">2. 限制对象在栈上初始化（C++）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#禁止在堆上创建对象"><span class="toc-number">2.1.</span> <span class="toc-text">禁止在堆上创建对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#禁止在栈上创建对象"><span class="toc-number">2.2.</span> <span class="toc-text">禁止在栈上创建对象</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-返回数组的指针的函数定义（C-）"><span class="toc-number">3.</span> <span class="toc-text">3. 返回数组的指针的函数定义（C++）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#类型别名"><span class="toc-number">3.1.</span> <span class="toc-text">类型别名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#直接方式"><span class="toc-number">3.2.</span> <span class="toc-text">直接方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#尾置返回类型"><span class="toc-number">3.3.</span> <span class="toc-text">尾置返回类型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-共M个比赛项目，推断比赛分值（附加）"><span class="toc-number">4.</span> <span class="toc-text">4. 共M个比赛项目，推断比赛分值（附加）</span></a></li></ol>
                 </div>
             
         
         
-            <p><strong>C++ Primer</strong>, 5th Edition<br>作者: Stanley B. Lippman / Josée Lajoie / Barbara E. Moo </p>
-<hr>
-<h2 id="标准库命名空间"><a href="#标准库命名空间" class="headerlink" title="标准库命名空间"></a>标准库命名空间</h2><ol>
-<li>使用<code>using namespace::name;</code>可以声明特定的名字</li>
-<li>头文件不应包含<code>using</code>声明，否则容易引起名字冲突</li>
-</ol>
-<hr>
-<h3 id="string-类型"><a href="#string-类型" class="headerlink" title="string 类型"></a>string 类型</h3><p>标准库类型 <code>string</code>表示可变长的字符序列</p>
-<h4 id="初始化string"><a href="#初始化string" class="headerlink" title="初始化string"></a>初始化string</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">string s1;              //默认初始化，s1为空串  </span><br><span class="line">string s2(s1);          //s2是s1的副本</span><br><span class="line">string s2 = s1;         //等价于上一条</span><br><span class="line">string s3(&quot;value&quot;);     //s3是字面值的副本</span><br><span class="line">string s3 = &quot;value&quot;;    //等价于上一条</span><br><span class="line">string s4(n,&apos;c&apos;);       //s4初始化为连续n个&apos;c&apos;组成的串</span><br></pre></td></tr></table></figure>
-<p>其中通过 <code>=</code>初始化的执行的是<strong>拷贝初始化</strong>(<em>copy intialization</em>)<br>而不使用等号的话执行的就是<strong>直接初始化</strong>(<em>direct intialization</em>)</p>
-<h4 id="string类的常用函数"><a href="#string类的常用函数" class="headerlink" title="string类的常用函数"></a>string类的常用函数</h4><ul>
-<li><code>empty()</code>检查是否为空字符串</li>
-<li><code>size()</code> 返回字符串中字符的个数</li>
-<li><code>[n]</code>    返回字符串中第n个字符的引用</li>
-<li><code>+</code>      字符串拼接</li>
-<li><code>&lt;=</code>     对于比较的两个字符串s1与s2，若s2包含s1的所有字符且s1比s2短，那么 <code>s1 &lt;= s2</code> ； 而若两个字符串在某个对应位置上不一致，则实际上比较的是那个不一致位置的字符</li>
-</ul>
-<h5 id="string-size-type类型"><a href="#string-size-type类型" class="headerlink" title="string::size_type类型"></a>string::size_type类型</h5><p><code>string::size_type</code>是定义于string类型内部的，用来表示<strong>string的长度</strong>的一种<strong>与机器无关的类型</strong></p>
-<p>string类和其它很多标准库类型都定义了集中配套的类型</p>
-<blockquote>
-<p>混用该类型与int可能会造成错误，若<code>n</code>是一个负数的int型变量，那么<code>string.size() &lt; n</code>几乎总是为true的，因为<code>string::size_type</code>是一个无符号类型，而为了进行比较，n会转换成一个比较大的无符号值</p>
+            <h3 id="1-不可能的出栈顺序（数据结构）"><a href="#1-不可能的出栈顺序（数据结构）" class="headerlink" title="1. 不可能的出栈顺序（数据结构）"></a>1. 不可能的出栈顺序（数据结构）</h3><blockquote>
+<p>一个栈的入栈序列为ABCDE，则不可能的出栈序列为?<br><em>(1). ECDBA  (2). DCEAB  (3). DECBA  (4). ABCDE  (5). EDCBA</em></p>
 </blockquote>
-<p>使用到<code>string::size_type</code>的地方</p>
+<p>答案：(1),(2)</p>
+<p>根据栈后进先出（LIFO）的特性，在入栈序列中位置偏后的元素首先出栈意味着在入栈序列中位于它前面的元素都还在栈中，因此这些元素只能按照逆序弹出</p>
+<p>由此，若D首先出栈，则栈中一定存在ABC，故出栈序列中只能存在CBA的顺序</p>
+<hr>
+<h3 id="2-限制对象在栈上初始化（C-）"><a href="#2-限制对象在栈上初始化（C-）" class="headerlink" title="2. 限制对象在栈上初始化（C++）"></a>2. 限制对象在栈上初始化（C++）</h3><p>在C++中，对象既可以通过<code>Type name;</code>的方式在栈上自动分配<br>也可以通过<code>Type * name = new Type;</code>的方式在堆上手动分配内存来创建</p>
 <ul>
-<li><code>size()</code>函数的返回值</li>
-<li>下标运算符 <code>[ ]</code>的输入参数</li>
+<li>其中堆的方式满足了我们需要动态内存的需求，如程序运行时需要不定数量的对象，不过在对象不适用的时候需要我们手动<code>delete</code>掉该对象</li>
+<li>而栈上是默认的方式，栈上的对象在它的生命期到的时候会被自动析构</li>
 </ul>
-<h5 id="字面值和string对象相加"><a href="#字面值和string对象相加" class="headerlink" title="字面值和string对象相加"></a>字面值和string对象相加</h5><p>要确保 <code>+</code> 运算符两侧的运算对象至少有一个是string</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">string</span> s1;</span><br><span class="line"><span class="built_in">string</span> s2 = ( s1 + <span class="string">","</span> ) + <span class="string">"world"</span>; </span><br><span class="line"><span class="comment">//错误，括号内的两个对象都是字面值，无法直接相加</span></span><br><span class="line"><span class="built_in">string</span> s3 = ( <span class="string">"Hello"</span> + <span class="string">","</span> ) + s2;</span><br></pre></td></tr></table></figure>
-<h5 id="处理string对象中的单个字符"><a href="#处理string对象中的单个字符" class="headerlink" title="处理string对象中的单个字符"></a>处理string对象中的单个字符</h5><h6 id="字符处理函数"><a href="#字符处理函数" class="headerlink" title="字符处理函数"></a>字符处理函数</h6><p><img src="https://upload-images.jianshu.io/upload_images/12312259-51b5a9d9f53a9e3d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="cctype"></p>
-<h6 id="range-for-语句"><a href="#range-for-语句" class="headerlink" title="$range for$ 语句"></a>$range for$ 语句</h6><figure class="highlight ada"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (declaration : <span class="type">expression</span>)</span><br><span class="line">    statement</span><br></pre></td></tr></table></figure>
-<p>range for是C++11中新增的简单遍历某个容器的循环语句</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//将某个string变为大写</span></span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s</span><span class="params">(<span class="string">"Hello World!!!"</span>)</span></span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> &amp;c:s)   <span class="comment">//需要引用类型才可以改变c的值</span></span><br><span class="line">    c = <span class="built_in">toupper</span>(c);</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; s &lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="禁止在堆上创建对象"><a href="#禁止在堆上创建对象" class="headerlink" title="禁止在堆上创建对象"></a>禁止在堆上创建对象</h4><p>通过将重载new函数设为private可以禁止在堆上创建对象<br><img src="https://upload-images.jianshu.io/upload_images/12312259-ae225c5b90d37a6b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="StackOnly"></p>
+<h4 id="禁止在栈上创建对象"><a href="#禁止在栈上创建对象" class="headerlink" title="禁止在栈上创建对象"></a>禁止在栈上创建对象</h4><p>通过禁用析构函数，将会禁止在栈上创建对象<br>此时需要自定义一个用于析构的函数<br><img src="https://upload-images.jianshu.io/upload_images/12312259-22aa3f1cb67c6e68.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="HeapOnly"></p>
+<p>//TODO<br>还有一种类似<a href="https://zh.wikipedia.org/wiki/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F" target="_blank" rel="noopener">单例模式</a>的方法</p>
+<hr>
+<h3 id="3-返回数组的指针的函数定义（C-）"><a href="#3-返回数组的指针的函数定义（C-）" class="headerlink" title="3. 返回数组的指针的函数定义（C++）"></a>3. 返回数组的指针的函数定义（C++）</h3><blockquote>
+<p>写出一个返回指向含有10个整数的数组的指针的函数</p>
+</blockquote>
+<h4 id="类型别名"><a href="#类型别名" class="headerlink" title="类型别名"></a>类型别名</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> arrT[<span class="number">10</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> arrT = <span class="keyword">int</span>[<span class="number">10</span>];<span class="comment">//同typedef的方法(C++11)</span></span><br><span class="line"><span class="function">arrT* <span class="title">func</span><span class="params">(<span class="keyword">int</span> i)</span></span>;</span><br></pre></td></tr></table></figure>
+<h4 id="直接方式"><a href="#直接方式" class="headerlink" title="直接方式"></a>直接方式</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> (*func(<span class="keyword">int</span> i))[<span class="number">10</span>];</span><br></pre></td></tr></table></figure>
+<p>返回数组指针的函数的通用形式为<code>Type (*function(parameter_list))[dimension]</code></p>
+<p>指针与数组<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> *p1[<span class="number">10</span>]; <span class="comment">//p1为一个含有10个指针的数组</span></span><br><span class="line"><span class="keyword">int</span> (*p2)[<span class="number">10</span>];<span class="comment">//p2为一个指向含有10个整数的数组的指针</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="尾置返回类型"><a href="#尾置返回类型" class="headerlink" title="尾置返回类型"></a>尾置返回类型</h4><figure class="highlight"><table><tr><td class="code"><pre><span class="line">auto func(int i) -&gt; int(*)[10];</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="4-共M个比赛项目，推断比赛分值（附加）"><a href="#4-共M个比赛项目，推断比赛分值（附加）" class="headerlink" title="4. 共M个比赛项目，推断比赛分值（附加）"></a>4. 共M个比赛项目，推断比赛分值（附加）</h3><blockquote>
+<p>有一种比赛，共有M个项目，有a，b，c三人参加，在每个项目中，都会决出一、二、三名，第一名得x分，第二名y分，第三名z分，且x&gt;y&gt;z,x，y，z都为正整数。<br>比赛结束后，a得了22分，b和c都是9分。已知M中项目中有一个是百米赛跑，b为第一名。<br>求M，x，y，z的值，并指出谁在跳高中得了第二名。</p>
+<p>答案：  $M=5$<br>$x=4,y=2,z=1$</p>
+</blockquote>
+<p><strong>分析</strong>：<br>因为 $a,b,c$三人的总得分为$40$<br>所以 $M(x+y+z)=40$<br>又因为$x \gt y \gt z$<br>所以$x+y+z \ge 6$<br>为满足$x,y,z$正整数的条件，用$T$表示$x+y+z$<br>则(T,M)可能为</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/12312259-fa82c078c1f7e94a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>从$T$最接近的（8,5）开始推测：<br>$Score_A=22=4*x+y \  or \ z$  </p>
+<p>$Score_B=9=x+4*z$  </p>
+<p>$Score_C=9=z+y*4$  </p>
+<p>可推断出<br><img src="https://upload-images.jianshu.io/upload_images/12312259-b078ecba0824335b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 
             </div>
         
@@ -474,19 +479,10 @@
     
 <nav id="article-nav">
     
-        <a href="../../算法导论/C3函数的增长/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">上一篇</strong>
-            <div class="article-nav-title">
-                
-                    函数的增长
-                
-            </div>
-        </a>
     
-    
-        <a href="../../../../06/Note/C++ Primer/C1&2变量和基本类型/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="../../../../../08/07/Note/算法导论/C3函数的增长/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">下一篇</strong>
-            <div class="article-nav-title">变量和基本类型</div>
+            <div class="article-nav-title">函数的增长</div>
         </a>
     
 </nav>
