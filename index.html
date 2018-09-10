@@ -161,11 +161,11 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                9
+                10
                 <span>posts</span>
             </div>
             <div class="article-info-block">
-                6
+                7
                 <span>tags</span>
             </div>
         </div>
@@ -234,6 +234,15 @@
                         <a href="#" data-role="directory">
                             <i class="fa fa-folder"></i>
                             &nbsp;
+                            Compilers
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="2018/09/10/Note/编译原理/C1 引论/">编译原理引论</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
                             Other
                         </a>
                          <ul class="unstyled" id="tree" >  <li class="file"><a href="2018/09/06/Note/Other/笔试9-5/">常见题目Part1</a></li>  </ul> 
@@ -263,7 +272,7 @@
                             &nbsp;
                             算法导论
                         </a>
-                         <ul class="unstyled" id="tree" >  <li class="file"><a href="2018/08/03/Note/算法导论/C1算法基础/">算法基础</a></li>  <li class="file"><a href="2018/08/07/Note/算法导论/C3函数的增长/">函数的增长</a></li>  </ul> 
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="2018/08/07/Note/算法导论/C3函数的增长/">函数的增长</a></li>  <li class="file"><a href="2018/08/03/Note/算法导论/C1算法基础/">算法基础</a></li>  </ul> 
                     </li> 
                      </ul> 
                     </li> 
@@ -339,7 +348,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title"><span>archives</span></h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/09/">September 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/08/">August 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/07/">July 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/05/">May 2018</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/09/">September 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/08/">August 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/07/">July 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2018/05/">May 2018</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -348,7 +357,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title"><span>tag cloud</span></h3>
         <div class="widget tagcloud">
-            <a href="tags/C/" style="font-size: 20px;">C++</a> <a href="tags/CLRS/" style="font-size: 15px;">CLRS</a> <a href="tags/MarkDown/" style="font-size: 10px;">MarkDown</a> <a href="tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="tags/汇编/" style="font-size: 10px;">汇编</a> <a href="tags/笔试/" style="font-size: 10px;">笔试</a>
+            <a href="tags/C/" style="font-size: 20px;">C++</a> <a href="tags/CLRS/" style="font-size: 15px;">CLRS</a> <a href="tags/DragonBook/" style="font-size: 10px;">DragonBook</a> <a href="tags/MarkDown/" style="font-size: 10px;">MarkDown</a> <a href="tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="tags/汇编/" style="font-size: 10px;">汇编</a> <a href="tags/笔试/" style="font-size: 10px;">笔试</a>
         </div>
     </div>
 
@@ -357,6 +366,110 @@
 </aside>
             
             <section id="main">
+        <article id="post-Note/编译原理/C1 引论" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="categories/Note/">Note</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="categories/Note/Compilers/">Compilers</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="tags/DragonBook/">DragonBook</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="2018/09/10/Note/编译原理/C1 引论/">
+            <time datetime="2018-09-10T02:20:23.000Z" itemprop="datePublished">2018-09-10</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a href='https://github.com/agt/Wiki-site/raw/writing/source/_posts/Note/编译原理/C1 引论.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/agt/Wiki-site/edit/writing/source/_posts/Note/编译原理/C1 引论.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/agt/Wiki-site/commits/writing/source/_posts/Note/编译原理/C1 引论.md'> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="2018/09/10/Note/编译原理/C1 引论/">编译原理引论</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p><p><strong>编译原理</strong>, 2th Edition<br>作者: Alfred V. Aho / Monica S.Lam / Ravi Sethi / Jeffrey D. Ullman  </p>
+<hr>
+<h2 id="编译原理"><a href="#编译原理" class="headerlink" title="编译原理"></a>编译原理</h2><p>在一个程序可以运行之前，它首先需要被翻译成一种能够被计算机执行的形式，实现这项工作的软件系统被称为<strong>编译器(Compilers)</strong></p>
+<h3 id="语言处理器"><a href="#语言处理器" class="headerlink" title="语言处理器"></a>语言处理器</h3><p>常见的语言处理器是<strong>编译器</strong>和<strong>解释器</strong>(Interpreter)</p>
+<ul>
+<p>
+                
+            
+        
+        
+            </div>   
+            <div class="article-more-link">
+                <a href="2018/09/10/Note/编译原理/C1 引论/#more">Read More</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
         <article id="post-Note/Other/笔试9-5" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -435,10 +548,10 @@
                 
                 
                     
-                    <p><h3 id="1-不可能的出栈顺序（数据结构）"><a href="#1-不可能的出栈顺序（数据结构）" class="headerlink" title="1. 不可能的出栈顺序（数据结构）"></a>1. 不可能的出栈顺序（数据结构）</h3><blockquote>
+                    <p><h3 id="1-不可能的出栈顺序-数据结构"><a href="#1-不可能的出栈顺序-数据结构" class="headerlink" title="1. 不可能的出栈顺序(数据结构)"></a>1. 不可能的出栈顺序(数据结构)</h3><blockquote>
 <p>一个栈的入栈序列为ABCDE，则不可能的出栈序列为?<br><em>(1). ECDBA  (2). DCEAB  (3). DECBA  (4). ABCDE  (5). EDCBA</em></p>
 </blockquote>
-<p>答案：(1),(2)</p>
+<p>答案：(1),(2)  </p>
 <p>根据栈后进先出（LIFO）的特性，在入栈序列中位置偏后的元素首先出栈意味着在入栈序列中位于它前面的元素都还在栈中，因此这些元素只能按照逆序弹出</p>
 <p>
                 

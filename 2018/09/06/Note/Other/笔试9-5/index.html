@@ -9,22 +9,22 @@
         <meta name="keywords" content="笔试" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="1. 不可能的出栈顺序（数据结构） 一个栈的入栈序列为ABCDE，则不可能的出栈序列为?(1). ECDBA  (2). DCEAB  (3). DECBA  (4). ABCDE  (5). EDCBA  答案：(1),(2) 根据栈后进先出（LIFO）的特性，在入栈序列中位置偏后的元素首先出栈意味着在入栈序列中位于它前面的元素都还在栈中，因此这些元素只能按照逆序弹出 由此，若D首先出栈，则栈中">
+    <meta name="description" content="1. 不可能的出栈顺序(数据结构) 一个栈的入栈序列为ABCDE，则不可能的出栈序列为?(1). ECDBA  (2). DCEAB  (3). DECBA  (4). ABCDE  (5). EDCBA  答案：(1),(2)   根据栈后进先出（LIFO）的特性，在入栈序列中位置偏后的元素首先出栈意味着在入栈序列中位于它前面的元素都还在栈中，因此这些元素只能按照逆序弹出 由此，若D首先出栈，则">
 <meta name="keywords" content="笔试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="常见题目Part1">
 <meta property="og:url" content="http://yoursite.com/2018/09/06/Note/Other/笔试9-5/index.html">
 <meta property="og:site_name" content="Agt Wiki">
-<meta property="og:description" content="1. 不可能的出栈顺序（数据结构） 一个栈的入栈序列为ABCDE，则不可能的出栈序列为?(1). ECDBA  (2). DCEAB  (3). DECBA  (4). ABCDE  (5). EDCBA  答案：(1),(2) 根据栈后进先出（LIFO）的特性，在入栈序列中位置偏后的元素首先出栈意味着在入栈序列中位于它前面的元素都还在栈中，因此这些元素只能按照逆序弹出 由此，若D首先出栈，则栈中">
+<meta property="og:description" content="1. 不可能的出栈顺序(数据结构) 一个栈的入栈序列为ABCDE，则不可能的出栈序列为?(1). ECDBA  (2). DCEAB  (3). DECBA  (4). ABCDE  (5). EDCBA  答案：(1),(2)   根据栈后进先出（LIFO）的特性，在入栈序列中位置偏后的元素首先出栈意味着在入栈序列中位于它前面的元素都还在栈中，因此这些元素只能按照逆序弹出 由此，若D首先出栈，则">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/12312259-ae225c5b90d37a6b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/12312259-22aa3f1cb67c6e68.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/12312259-fa82c078c1f7e94a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/12312259-58780ae321251419.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-09-07T02:01:23.119Z">
+<meta property="og:updated_time" content="2018-09-08T16:27:43.943Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常见题目Part1">
-<meta name="twitter:description" content="1. 不可能的出栈顺序（数据结构） 一个栈的入栈序列为ABCDE，则不可能的出栈序列为?(1). ECDBA  (2). DCEAB  (3). DECBA  (4). ABCDE  (5). EDCBA  答案：(1),(2) 根据栈后进先出（LIFO）的特性，在入栈序列中位置偏后的元素首先出栈意味着在入栈序列中位于它前面的元素都还在栈中，因此这些元素只能按照逆序弹出 由此，若D首先出栈，则栈中">
+<meta name="twitter:description" content="1. 不可能的出栈顺序(数据结构) 一个栈的入栈序列为ABCDE，则不可能的出栈序列为?(1). ECDBA  (2). DCEAB  (3). DECBA  (4). ABCDE  (5). EDCBA  答案：(1),(2)   根据栈后进先出（LIFO）的特性，在入栈序列中位置偏后的元素首先出栈意味着在入栈序列中位于它前面的元素都还在栈中，因此这些元素只能按照逆序弹出 由此，若D首先出栈，则">
 <meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/12312259-ae225c5b90d37a6b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
     
 
@@ -171,11 +171,11 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                9
+                10
                 <span>posts</span>
             </div>
             <div class="article-info-block">
-                6
+                7
                 <span>tags</span>
             </div>
         </div>
@@ -240,6 +240,15 @@
                          <ul class="unstyled" id="tree" >  <li class="file"><a href="../../../../../08/07/Note/C++ Primer/C3 字符串、向量和数组/">标准库与字符串</a></li>  <li class="file"><a href="../../../../../08/06/Note/C++ Primer/C1&2变量和基本类型/">变量和基本类型</a></li>  </ul> 
                     </li> 
                     
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Compilers
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../../../../10/Note/编译原理/C1 引论/">编译原理引论</a></li>  </ul> 
+                    </li> 
+                    
                     <li class="directory open">
                         <a href="#" data-role="directory">
                             <i class="fa fa-folder-open"></i>
@@ -273,7 +282,7 @@
                             &nbsp;
                             算法导论
                         </a>
-                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../../../../../08/03/Note/算法导论/C1算法基础/">算法基础</a></li>  <li class="file"><a href="../../../../../08/07/Note/算法导论/C3函数的增长/">函数的增长</a></li>  </ul> 
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../../../../../08/07/Note/算法导论/C3函数的增长/">函数的增长</a></li>  <li class="file"><a href="../../../../../08/03/Note/算法导论/C1算法基础/">算法基础</a></li>  </ul> 
                     </li> 
                      </ul> 
                     </li> 
@@ -349,7 +358,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title"><span>archives</span></h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../../../archives/2018/09/">September 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../../../archives/2018/08/">August 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../../../archives/2018/07/">July 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../../../archives/2018/05/">May 2018</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../../../../archives/2018/09/">September 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../../../archives/2018/08/">August 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../../../archives/2018/07/">July 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../../../../archives/2018/05/">May 2018</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -358,7 +367,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title"><span>tag cloud</span></h3>
         <div class="widget tagcloud">
-            <a href="../../../../../../tags/C/" style="font-size: 20px;">C++</a> <a href="../../../../../../tags/CLRS/" style="font-size: 15px;">CLRS</a> <a href="../../../../../../tags/MarkDown/" style="font-size: 10px;">MarkDown</a> <a href="../../../../../../tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="../../../../../../tags/汇编/" style="font-size: 10px;">汇编</a> <a href="../../../../../../tags/笔试/" style="font-size: 10px;">笔试</a>
+            <a href="../../../../../../tags/C/" style="font-size: 20px;">C++</a> <a href="../../../../../../tags/CLRS/" style="font-size: 15px;">CLRS</a> <a href="../../../../../../tags/DragonBook/" style="font-size: 10px;">DragonBook</a> <a href="../../../../../../tags/MarkDown/" style="font-size: 10px;">MarkDown</a> <a href="../../../../../../tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="../../../../../../tags/汇编/" style="font-size: 10px;">汇编</a> <a href="../../../../../../tags/笔试/" style="font-size: 10px;">笔试</a>
         </div>
     </div>
 
@@ -427,15 +436,15 @@
             
                 <div id="toc" class="toc-article">
                 <strong class="toc-title">Catalogue</strong>
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-不可能的出栈顺序（数据结构）"><span class="toc-number">1.</span> <span class="toc-text">1. 不可能的出栈顺序（数据结构）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-限制对象在栈上初始化（C-）"><span class="toc-number">2.</span> <span class="toc-text">2. 限制对象在栈上初始化（C++）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#禁止在堆上创建对象"><span class="toc-number">2.1.</span> <span class="toc-text">禁止在堆上创建对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#禁止在栈上创建对象"><span class="toc-number">2.2.</span> <span class="toc-text">禁止在栈上创建对象</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-返回数组的指针的函数定义（C-）"><span class="toc-number">3.</span> <span class="toc-text">3. 返回数组的指针的函数定义（C++）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#类型别名"><span class="toc-number">3.1.</span> <span class="toc-text">类型别名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#直接方式"><span class="toc-number">3.2.</span> <span class="toc-text">直接方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#尾置返回类型"><span class="toc-number">3.3.</span> <span class="toc-text">尾置返回类型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-共M个比赛项目，推断比赛分值（附加）"><span class="toc-number">4.</span> <span class="toc-text">4. 共M个比赛项目，推断比赛分值（附加）</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-不可能的出栈顺序-数据结构"><span class="toc-number">1.</span> <span class="toc-text">1. 不可能的出栈顺序(数据结构)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-限制对象在栈上初始化（C-）"><span class="toc-number">2.</span> <span class="toc-text">2. 限制对象在栈上初始化（C++）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#禁止在堆上创建对象"><span class="toc-number">2.1.</span> <span class="toc-text">禁止在堆上创建对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#禁止在栈上创建对象"><span class="toc-number">2.2.</span> <span class="toc-text">禁止在栈上创建对象</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-返回数组的指针的函数定义（C-）"><span class="toc-number">3.</span> <span class="toc-text">3. 返回数组的指针的函数定义（C++）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#类型别名"><span class="toc-number">3.1.</span> <span class="toc-text">类型别名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#直接方式"><span class="toc-number">3.2.</span> <span class="toc-text">直接方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#尾置返回类型"><span class="toc-number">3.3.</span> <span class="toc-text">尾置返回类型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-共M个比赛项目，推断比赛分值（附加）"><span class="toc-number">4.</span> <span class="toc-text">4. 共M个比赛项目，推断比赛分值（附加）</span></a></li></ol>
                 </div>
             
         
         
-            <h3 id="1-不可能的出栈顺序（数据结构）"><a href="#1-不可能的出栈顺序（数据结构）" class="headerlink" title="1. 不可能的出栈顺序（数据结构）"></a>1. 不可能的出栈顺序（数据结构）</h3><blockquote>
+            <h3 id="1-不可能的出栈顺序-数据结构"><a href="#1-不可能的出栈顺序-数据结构" class="headerlink" title="1. 不可能的出栈顺序(数据结构)"></a>1. 不可能的出栈顺序(数据结构)</h3><blockquote>
 <p>一个栈的入栈序列为ABCDE，则不可能的出栈序列为?<br><em>(1). ECDBA  (2). DCEAB  (3). DECBA  (4). ABCDE  (5). EDCBA</em></p>
 </blockquote>
-<p>答案：(1),(2)</p>
+<p>答案：(1),(2)  </p>
 <p>根据栈后进先出（LIFO）的特性，在入栈序列中位置偏后的元素首先出栈意味着在入栈序列中位于它前面的元素都还在栈中，因此这些元素只能按照逆序弹出</p>
 <p>由此，若D首先出栈，则栈中一定存在ABC，故出栈序列中只能存在CBA的顺序</p>
 <hr>
@@ -478,6 +487,15 @@
 
     
 <nav id="article-nav">
+    
+        <a href="../../../../10/Note/编译原理/C1 引论/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    编译原理引论
+                
+            </div>
+        </a>
     
     
         <a href="../../../../../08/07/Note/算法导论/C3函数的增长/" id="article-nav-older" class="article-nav-link-wrap">
