@@ -183,9 +183,9 @@
       <category term="Engineer" scheme="http://yoursite.com/categories/Engineer/"/>
     
     
-      <category term="CLRS" scheme="http://yoursite.com/tags/CLRS/"/>
-    
       <category term="C++" scheme="http://yoursite.com/tags/C/"/>
+    
+      <category term="CLRS" scheme="http://yoursite.com/tags/CLRS/"/>
     
   </entry>
   
@@ -270,9 +270,9 @@
       <category term="Engineer" scheme="http://yoursite.com/categories/Engineer/"/>
     
     
-      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
-    
       <category term="OpenCV" scheme="http://yoursite.com/tags/OpenCV/"/>
+    
+      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
     
   </entry>
   
