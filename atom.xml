@@ -74,6 +74,35 @@
   </entry>
   
   <entry>
+    <title>面向对象程序设计</title>
+    <link href="http://yoursite.com/2018/08/22/Note/C++%20Primer/C15%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"/>
+    <id>http://yoursite.com/2018/08/22/Note/C++ Primer/C15 面向对象程序设计/</id>
+    <published>2018-08-22T14:58:30.000Z</published>
+    <updated>2018-10-06T11:24:20.640Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>C++ Primer</strong>, 5th Edition<br>作者: Stanley B. Lippman / Josée Lajoie / Barbara E. Moo </p><hr><h2 id="OOP-概述"><a href="#OOP-概述" class="headerlink" title="OOP:概述"></a>OOP:概述</h2><p>面向对象程序设计(object-oriented programming)的核心思想是数据抽象、继承和动态绑定</p><h3 id="继承-Inheritance"><a href="#继承-Inheritance" class="headerlink" title="继承(Inheritance)"></a>继承(Inheritance)</h3><p>通过继承联系在一起的几个类之间有一种层次关系</p><p>通常在层次根部有一个基类(base class)，其他类则直接或间接地由基类继承而来，这些类被称为派生类(derived class)</p><p>通常，基类包含的属性是所有类所共有的，即我们把需要用到的类的共同部分定义为它们的基类。而派生类则既拥有基类的公共部分，又有自己所特有的部分</p><hr><h2 id="基类和派生类"><a href="#基类和派生类" class="headerlink" title="基类和派生类"></a>基类和派生类</h2><h3 id="定义基类"><a href="#定义基类" class="headerlink" title="定义基类"></a>定义基类</h3><p>基类是继承体系中最基本的类结构，它表示的是整个继承体系中所共有的部分属性</p><p>基类一般有两种成员函数：</p><ol><li>一种是基类希望其派生类进行覆盖(override)的函数</li><li>另一种是基类希望派生类直接继承的函数</li></ol><p>其中，第一种情况下使用的技术称为<code>虚函数</code></p><h4 id="虚函数-virtual-function"><a href="#虚函数-virtual-function" class="headerlink" title="虚函数(virtual function)"></a>虚函数(virtual function)</h4><p>派生类会自动拥有基类中它有权限访问到的函数成员，而有时我们需要让子类自定义某个从基类继承而来的函数，这是就需要在基类中使该函数变为“虚的”函数</p><p>通过在函数定义前加上<code>virtual</code>关键字即可将函数设置为虚函数</p><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Quote</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span> :</span><br><span class="line"> <span class="built_in">std</span>::<span class="function"><span class="built_in">string</span> <span class="title">isbn</span><span class="params">()</span><span class="keyword">const</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">double</span> <span class="title">net_price</span><span class="params">(<span class="built_in">std</span>::<span class="keyword">size_t</span> n)</span><span class="keyword">const</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>关键字virtual只能出现在类内部的声明语句前而不能用于类外</p><p>如果一个函数在基类中被声明为虚函数，则它在派生类中隐式地也是虚函数</p></blockquote><h4 id="动态绑定-dynamic-binding"><a href="#动态绑定-dynamic-binding" class="headerlink" title="动态绑定(dynamic binding)"></a>动态绑定(dynamic binding)</h4><p>当类的用户通过一个基类的引用或指针来调用一个虚函数的时候就会发生动态绑定</p><p>因为在运行时才能确定这个基类的引用或指针所对应的对象的具体类型（可能是真的基类，或是它的派生类），然后会调用具体类型版本的虚函数，所以动态绑定又被称为运行时绑定(run-time binding)</p><p>动态绑定是一种多态性的体现</p><h3 id="定义派生类"><a href="#定义派生类" class="headerlink" title="定义派生类"></a>定义派生类</h3><p>派生类由类派生列表明确指出它是从哪个（哪些）基类继承而来的</p><p>紧跟一个<code>:</code>   当由多个基类时基类之间用 <code>,</code> 分割</p><h4 id="派生类列表-class-derivation-list"><a href="#派生类列表-class-derivation-list" class="headerlink" title="派生类列表(class derivation list)"></a>派生类列表(class derivation list)</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bulk_quote</span>:</span><span class="keyword">public</span> Quote&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">//override C++11</span></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">net_price</span><span class="params">(<span class="built_in">std</span>::<span class="keyword">size_t</span>)</span><span class="keyword">const</span> override</span>;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>override 显式地声明该函数将重写从基类继承而来的函数</p></blockquote><p>一个派生类对象分为多个部分：</p><ol><li>一个含有派生类自己定义的（非静态）成员的子对象</li><li>一个与该派生类继承的基类对应的子对象（多继承则多对象）</li></ol><blockquote><p>在一个对象中，继承自基类的部分和派生类自定义的部分不一定是连续存储的</p></blockquote><h3 id="访问控制继承"><a href="#访问控制继承" class="headerlink" title="访问控制继承"></a>访问控制继承</h3><p>类内的函数与成员分为三种级别的权限：</p><div class="table-container"><table><thead><tr><th>public</th><th style="text-align:left">公有</th><th>类外也可以访问</th></tr></thead><tbody><tr><td>protected</td><td style="text-align:left">受保护的</td><td>类外仅派生类可以访问</td></tr><tr><td>private</td><td style="text-align:left">私有</td><td>仅仅本类的类内可以访问</td></tr></tbody></table></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;C++ Primer&lt;/strong&gt;, 5th Edition&lt;br&gt;作者: Stanley B. Lippman / Josée Lajoie / Barbara E. Moo &lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;OOP-概述&quot;&gt;&lt;a href=&quot;#OO
+      
+    
+    </summary>
+    
+      <category term="Note" scheme="http://yoursite.com/categories/Note/"/>
+    
+      <category term="C++ Primer" scheme="http://yoursite.com/categories/Note/C-Primer/"/>
+    
+    
+      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>函数的增长</title>
     <link href="http://yoursite.com/2018/08/07/Note/%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA/C3%E5%87%BD%E6%95%B0%E7%9A%84%E5%A2%9E%E9%95%BF/"/>
     <id>http://yoursite.com/2018/08/07/Note/算法导论/C3函数的增长/</id>
@@ -183,9 +212,9 @@
       <category term="Engineer" scheme="http://yoursite.com/categories/Engineer/"/>
     
     
-      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
-    
       <category term="CLRS" scheme="http://yoursite.com/tags/CLRS/"/>
+    
+      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
     
   </entry>
   
@@ -219,35 +248,6 @@
   </entry>
   
   <entry>
-    <title>loop指令和使用[BX]访问内存</title>
-    <link href="http://yoursite.com/2018/08/02/Note/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/%E7%AC%AC5%E7%AB%A0%20%5BBX%5D%E5%92%8Cloop%E6%8C%87%E4%BB%A4/"/>
-    <id>http://yoursite.com/2018/08/02/Note/汇编语言/第5章 [BX]和loop指令/</id>
-    <published>2018-08-02T13:17:30.000Z</published>
-    <updated>2018-08-13T13:39:03.858Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>汇编语言</strong>，第三版<br>作者: 王爽 </p><hr><h2 id="使用-bx-访问内存地址"><a href="#使用-bx-访问内存地址" class="headerlink" title="使用[bx]访问内存地址"></a>使用[bx]访问内存地址</h2><p>要完整的描述一个内存单元，需要知道：</p><ol><li>内存单元的地址</li><li>内存单元的长度 （或是通过类型推断出长度）</li></ol><h3 id="类型推断长度"><a href="#类型推断长度" class="headerlink" title="类型推断长度"></a>类型推断长度</h3><ul><li>已知段地址默认保存在ds中，所以<code>mov ax,[bx]</code>可以将ds:bx处长度2个字节单元的数据移动到ax里。</li><li>而<code>mov al,[bx]</code>则将同一个起始位置长度1个字节单元的数据移动到al里。</li></ul><hr><h2 id="Loop指令"><a href="#Loop指令" class="headerlink" title="Loop指令"></a>Loop指令</h2><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight x86asm"><table><tr><td class="code"><pre><span class="line"><span class="meta">assume</span> <span class="built_in">cs</span>:code</span><br><span class="line">code <span class="meta">segment</span></span><br><span class="line">    <span class="keyword">mov</span> <span class="built_in">ax</span>,<span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">mov</span> <span class="built_in">cx</span>,<span class="number">236</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">s:</span>  <span class="keyword">add</span> <span class="built_in">ax</span>,<span class="number">123</span></span><br><span class="line">    <span class="keyword">loop</span> s</span><br><span class="line"></span><br><span class="line">    <span class="keyword">mov</span> <span class="built_in">ax</span>,<span class="number">4c00h</span></span><br><span class="line">    <span class="keyword">int</span> <span class="number">21h</span></span><br><span class="line">code ends</span><br><span class="line">end</span><br></pre></td></tr></table></figure><p><code>其中cx内的值为循环次数，s：标识的位置为循环开始地址</code></p><h3 id="执行loop指令的步骤"><a href="#执行loop指令的步骤" class="headerlink" title="执行loop指令的步骤"></a>执行loop指令的步骤</h3><ol><li>cx = cx -1 </li><li>判断cx的值，若不为0则跳转至标号处执行，若为0则向下执行</li></ol><hr><h2 id="安全空间"><a href="#安全空间" class="headerlink" title="安全空间"></a>安全空间</h2><p>在实模式下运行的设备并没有对硬件系统进行安全性检查的功能，所以可能出现系统级的数据或是程序被用户的汇编程序修改的问题，所以需要避开使用不安全的地址范围</p><ul><li>在Dos下，一般0:200~0:2ff的空间是可以安全使用的</li></ul><hr><h2 id="Tip"><a href="#Tip" class="headerlink" title="Tip"></a>Tip</h2><ul><li>在汇编源程序中，数据不能以字母开头，要在数据前补一个’0’ ，  <code>A000h</code>在源程序中要写为<code>0A000h</code></li><li>地址表示法在debug与源程序中的不同<ul><li>指令<code>mov ax,[0]</code>在<code>Debug</code>工具上表示将<code>ds:0</code>地址的数据送入ax寄存器</li><li>而在汇编源程序中被识别为<code>mov ax,0</code>，解决方式：使用显式地给出段寄存器，<code>mov ax,ds:[0]</code>,前缀<code>ds</code>在这里被称为<strong>段前缀</strong></li></ul></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;strong&gt;汇编语言&lt;/strong&gt;，第三版&lt;br&gt;作者: 王爽 &lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;使用-bx-访问内存地址&quot;&gt;&lt;a href=&quot;#使用-bx-访问内存地址&quot; class=&quot;headerlink&quot; title=&quot;使用[bx]访问内存地址&quot;&gt;&lt;/a&gt;使
-      
-    
-    </summary>
-    
-      <category term="Note" scheme="http://yoursite.com/categories/Note/"/>
-    
-      <category term="汇编语言" scheme="http://yoursite.com/categories/Note/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/"/>
-    
-    
-      <category term="汇编" scheme="http://yoursite.com/tags/%E6%B1%87%E7%BC%96/"/>
-    
-  </entry>
-  
-  <entry>
     <title>OpenCV C++环境搭建</title>
     <link href="http://yoursite.com/2018/07/02/Engineer/OpenCV-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
     <id>http://yoursite.com/2018/07/02/Engineer/OpenCV-环境搭建/</id>
@@ -270,9 +270,9 @@
       <category term="Engineer" scheme="http://yoursite.com/categories/Engineer/"/>
     
     
-      <category term="OpenCV" scheme="http://yoursite.com/tags/OpenCV/"/>
-    
       <category term="C++" scheme="http://yoursite.com/tags/C/"/>
+    
+      <category term="OpenCV" scheme="http://yoursite.com/tags/OpenCV/"/>
     
   </entry>
   

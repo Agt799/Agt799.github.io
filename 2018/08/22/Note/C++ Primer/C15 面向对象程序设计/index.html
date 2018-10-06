@@ -3,26 +3,24 @@
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     
-    <title>标准库与字符串 | Agt Wiki</title>
+    <title>面向对象程序设计 | Agt Wiki</title>
     
     
         <meta name="keywords" content="C++" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="C++ Primer, 5th Edition作者: Stanley B. Lippman / Josée Lajoie / Barbara E. Moo   标准库命名空间 使用using namespace::name;可以声明特定的名字 头文件不应包含using声明，否则容易引起名字冲突   string 类型标准库类型 string表示可变长的字符序列 初始化stringstring s1">
+    <meta name="description" content="C++ Primer, 5th Edition作者: Stanley B. Lippman / Josée Lajoie / Barbara E. Moo   OOP:概述面向对象程序设计(object-oriented programming)的核心思想是数据抽象、继承和动态绑定 继承(Inheritance)通过继承联系在一起的几个类之间有一种层次关系 通常在层次根部有一个基类(base cl">
 <meta name="keywords" content="C++">
 <meta property="og:type" content="article">
-<meta property="og:title" content="标准库与字符串">
-<meta property="og:url" content="http://yoursite.com/2018/08/07/Note/C++ Primer/C3 字符串、向量和数组/index.html">
+<meta property="og:title" content="面向对象程序设计">
+<meta property="og:url" content="http://yoursite.com/2018/08/22/Note/C++ Primer/C15 面向对象程序设计/index.html">
 <meta property="og:site_name" content="Agt Wiki">
-<meta property="og:description" content="C++ Primer, 5th Edition作者: Stanley B. Lippman / Josée Lajoie / Barbara E. Moo   标准库命名空间 使用using namespace::name;可以声明特定的名字 头文件不应包含using声明，否则容易引起名字冲突   string 类型标准库类型 string表示可变长的字符序列 初始化stringstring s1">
+<meta property="og:description" content="C++ Primer, 5th Edition作者: Stanley B. Lippman / Josée Lajoie / Barbara E. Moo   OOP:概述面向对象程序设计(object-oriented programming)的核心思想是数据抽象、继承和动态绑定 继承(Inheritance)通过继承联系在一起的几个类之间有一种层次关系 通常在层次根部有一个基类(base cl">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/12312259-51b5a9d9f53a9e3d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-08-30T08:34:15.969Z">
+<meta property="og:updated_time" content="2018-10-06T11:24:20.640Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="标准库与字符串">
-<meta name="twitter:description" content="C++ Primer, 5th Edition作者: Stanley B. Lippman / Josée Lajoie / Barbara E. Moo   标准库命名空间 使用using namespace::name;可以声明特定的名字 头文件不应包含using声明，否则容易引起名字冲突   string 类型标准库类型 string表示可变长的字符序列 初始化stringstring s1">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/12312259-51b5a9d9f53a9e3d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="面向对象程序设计">
+<meta name="twitter:description" content="C++ Primer, 5th Edition作者: Stanley B. Lippman / Josée Lajoie / Barbara E. Moo   OOP:概述面向对象程序设计(object-oriented programming)的核心思想是数据抽象、继承和动态绑定 继承(Inheritance)通过继承联系在一起的几个类之间有一种层次关系 通常在层次根部有一个基类(base cl">
     
 
     
@@ -234,7 +232,7 @@
                             &nbsp;
                             C++ Primer
                         </a>
-                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../../../../22/Note/C++ Primer/C15 面向对象程序设计/">面向对象程序设计</a></li>  <li class="file active"><a href="">标准库与字符串</a></li>  <li class="file"><a href="../../../../06/Note/C++ Primer/C1&2变量和基本类型/">变量和基本类型</a></li>  </ul> 
+                         <ul class="unstyled" id="tree" >  <li class="file active"><a href="">面向对象程序设计</a></li>  <li class="file"><a href="../../../../07/Note/C++ Primer/C3 字符串、向量和数组/">标准库与字符串</a></li>  <li class="file"><a href="../../../../06/Note/C++ Primer/C1&2变量和基本类型/">变量和基本类型</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -270,7 +268,7 @@
                             &nbsp;
                             算法导论
                         </a>
-                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../../算法导论/C3函数的增长/">函数的增长</a></li>  <li class="file"><a href="../../../../03/Note/算法导论/C1算法基础/">算法基础</a></li>  </ul> 
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../../../../07/Note/算法导论/C3函数的增长/">函数的增长</a></li>  <li class="file"><a href="../../../../03/Note/算法导论/C1算法基础/">算法基础</a></li>  </ul> 
                     </li> 
                      </ul> 
                     </li> 
@@ -363,7 +361,7 @@
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
             
-            <section id="main"><article id="post-Note/C++ Primer/C3 字符串、向量和数组" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-Note/C++ Primer/C15 面向对象程序设计" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -386,7 +384,7 @@
     <div class="article-date">
         <i class="fa fa-calendar"></i>
         <a href="">
-            <time datetime="2018-08-07T04:17:30.000Z" itemprop="datePublished">2018-08-07</time>
+            <time datetime="2018-08-22T14:58:30.000Z" itemprop="datePublished">2018-08-22</time>
         </a>
     </div>
 
@@ -397,13 +395,13 @@
                         
                         
                             <div class="article-meta-button">
-                                <a href='https://github.com/agt/Wiki-site/raw/writing/source/_posts/Note/C++ Primer/C3 字符串、向量和数组.md'> Source </a>
+                                <a href='https://github.com/agt/Wiki-site/raw/writing/source/_posts/Note/C++ Primer/C15 面向对象程序设计.md'> Source </a>
                             </div>
                             <div class="article-meta-button">
-                                <a href='https://github.com/agt/Wiki-site/edit/writing/source/_posts/Note/C++ Primer/C3 字符串、向量和数组.md'> Edit </a>
+                                <a href='https://github.com/agt/Wiki-site/edit/writing/source/_posts/Note/C++ Primer/C15 面向对象程序设计.md'> Edit </a>
                             </div>
                             <div class="article-meta-button">
-                                <a href='https://github.com/agt/Wiki-site/commits/writing/source/_posts/Note/C++ Primer/C3 字符串、向量和数组.md'> History </a>
+                                <a href='https://github.com/agt/Wiki-site/commits/writing/source/_posts/Note/C++ Primer/C15 面向对象程序设计.md'> History </a>
                             </div>
                         
                     </div>
@@ -411,7 +409,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            标准库与字符串
+            面向对象程序设计
         </h1>
     
 
@@ -424,44 +422,73 @@
             
                 <div id="toc" class="toc-article">
                 <strong class="toc-title">Catalogue</strong>
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#标准库命名空间"><span class="toc-number">1.</span> <span class="toc-text">标准库命名空间</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#string-类型"><span class="toc-number">1.1.</span> <span class="toc-text">string 类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#初始化string"><span class="toc-number">1.1.1.</span> <span class="toc-text">初始化string</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#string类的常用函数"><span class="toc-number">1.1.2.</span> <span class="toc-text">string类的常用函数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#string-size-type类型"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">string::size_type类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#字面值和string对象相加"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">字面值和string对象相加</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#处理string对象中的单个字符"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">处理string对象中的单个字符</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#字符处理函数"><span class="toc-number">1.1.2.3.1.</span> <span class="toc-text">字符处理函数</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#range-for-语句"><span class="toc-number">1.1.2.3.2.</span> <span class="toc-text">$range for$ 语句</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#OOP-概述"><span class="toc-number">1.</span> <span class="toc-text">OOP:概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#继承-Inheritance"><span class="toc-number">1.1.</span> <span class="toc-text">继承(Inheritance)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基类和派生类"><span class="toc-number">2.</span> <span class="toc-text">基类和派生类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#定义基类"><span class="toc-number">2.1.</span> <span class="toc-text">定义基类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#虚函数-virtual-function"><span class="toc-number">2.1.1.</span> <span class="toc-text">虚函数(virtual function)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#动态绑定-dynamic-binding"><span class="toc-number">2.1.2.</span> <span class="toc-text">动态绑定(dynamic binding)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#定义派生类"><span class="toc-number">2.2.</span> <span class="toc-text">定义派生类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#派生类列表-class-derivation-list"><span class="toc-number">2.2.1.</span> <span class="toc-text">派生类列表(class derivation list)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#访问控制继承"><span class="toc-number">2.3.</span> <span class="toc-text">访问控制继承</span></a></li></ol></li></ol>
                 </div>
             
         
         
             <p><strong>C++ Primer</strong>, 5th Edition<br>作者: Stanley B. Lippman / Josée Lajoie / Barbara E. Moo </p>
 <hr>
-<h2 id="标准库命名空间"><a href="#标准库命名空间" class="headerlink" title="标准库命名空间"></a>标准库命名空间</h2><ol>
-<li>使用<code>using namespace::name;</code>可以声明特定的名字</li>
-<li>头文件不应包含<code>using</code>声明，否则容易引起名字冲突</li>
-</ol>
+<h2 id="OOP-概述"><a href="#OOP-概述" class="headerlink" title="OOP:概述"></a>OOP:概述</h2><p>面向对象程序设计(object-oriented programming)的核心思想是数据抽象、继承和动态绑定</p>
+<h3 id="继承-Inheritance"><a href="#继承-Inheritance" class="headerlink" title="继承(Inheritance)"></a>继承(Inheritance)</h3><p>通过继承联系在一起的几个类之间有一种层次关系</p>
+<p>通常在层次根部有一个基类(base class)，其他类则直接或间接地由基类继承而来，这些类被称为派生类(derived class)</p>
+<p>通常，基类包含的属性是所有类所共有的，即我们把需要用到的类的共同部分定义为它们的基类。而派生类则既拥有基类的公共部分，又有自己所特有的部分</p>
 <hr>
-<h3 id="string-类型"><a href="#string-类型" class="headerlink" title="string 类型"></a>string 类型</h3><p>标准库类型 <code>string</code>表示可变长的字符序列</p>
-<h4 id="初始化string"><a href="#初始化string" class="headerlink" title="初始化string"></a>初始化string</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">string s1;              //默认初始化，s1为空串  </span><br><span class="line">string s2(s1);          //s2是s1的副本</span><br><span class="line">string s2 = s1;         //等价于上一条</span><br><span class="line">string s3(&quot;value&quot;);     //s3是字面值的副本</span><br><span class="line">string s3 = &quot;value&quot;;    //等价于上一条</span><br><span class="line">string s4(n,&apos;c&apos;);       //s4初始化为连续n个&apos;c&apos;组成的串</span><br></pre></td></tr></table></figure>
-<p>其中通过 <code>=</code>初始化的执行的是<strong>拷贝初始化</strong>(<em>copy intialization</em>)<br>而不使用等号的话执行的就是<strong>直接初始化</strong>(<em>direct intialization</em>)</p>
-<h4 id="string类的常用函数"><a href="#string类的常用函数" class="headerlink" title="string类的常用函数"></a>string类的常用函数</h4><ul>
-<li><code>empty()</code>检查是否为空字符串</li>
-<li><code>size()</code> 返回字符串中字符的个数</li>
-<li><code>[n]</code>    返回字符串中第n个字符的引用</li>
-<li><code>+</code>      字符串拼接</li>
-<li><code>&lt;=</code>     对于比较的两个字符串s1与s2，若s2包含s1的所有字符且s1比s2短，那么 <code>s1 &lt;= s2</code> ； 而若两个字符串在某个对应位置上不一致，则实际上比较的是那个不一致位置的字符</li>
-</ul>
-<h5 id="string-size-type类型"><a href="#string-size-type类型" class="headerlink" title="string::size_type类型"></a>string::size_type类型</h5><p><code>string::size_type</code>是定义于string类型内部的，用来表示<strong>string的长度</strong>的一种<strong>与机器无关的类型</strong></p>
-<p>string类和其它很多标准库类型都定义了集中配套的类型</p>
+<h2 id="基类和派生类"><a href="#基类和派生类" class="headerlink" title="基类和派生类"></a>基类和派生类</h2><h3 id="定义基类"><a href="#定义基类" class="headerlink" title="定义基类"></a>定义基类</h3><p>基类是继承体系中最基本的类结构，它表示的是整个继承体系中所共有的部分属性</p>
+<p>基类一般有两种成员函数：</p>
+<ol>
+<li>一种是基类希望其派生类进行覆盖(override)的函数</li>
+<li>另一种是基类希望派生类直接继承的函数</li>
+</ol>
+<p>其中，第一种情况下使用的技术称为<code>虚函数</code></p>
+<h4 id="虚函数-virtual-function"><a href="#虚函数-virtual-function" class="headerlink" title="虚函数(virtual function)"></a>虚函数(virtual function)</h4><p>派生类会自动拥有基类中它有权限访问到的函数成员，而有时我们需要让子类自定义某个从基类继承而来的函数，这是就需要在基类中使该函数变为“虚的”函数</p>
+<p>通过在函数定义前加上<code>virtual</code>关键字即可将函数设置为虚函数</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Quote</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span> :</span><br><span class="line"> 	<span class="built_in">std</span>::<span class="function"><span class="built_in">string</span> <span class="title">isbn</span><span class="params">()</span><span class="keyword">const</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">double</span> <span class="title">net_price</span><span class="params">(<span class="built_in">std</span>::<span class="keyword">size_t</span> n)</span><span class="keyword">const</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>混用该类型与int可能会造成错误，若<code>n</code>是一个负数的int型变量，那么<code>string.size() &lt; n</code>几乎总是为true的，因为<code>string::size_type</code>是一个无符号类型，而为了进行比较，n会转换成一个比较大的无符号值</p>
+<p>关键字virtual只能出现在类内部的声明语句前而不能用于类外</p>
+<p>如果一个函数在基类中被声明为虚函数，则它在派生类中隐式地也是虚函数</p>
 </blockquote>
-<p>使用到<code>string::size_type</code>的地方</p>
-<ul>
-<li><code>size()</code>函数的返回值</li>
-<li>下标运算符 <code>[ ]</code>的输入参数</li>
-</ul>
-<h5 id="字面值和string对象相加"><a href="#字面值和string对象相加" class="headerlink" title="字面值和string对象相加"></a>字面值和string对象相加</h5><p>要确保 <code>+</code> 运算符两侧的运算对象至少有一个是string</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="built_in">string</span> s1;</span><br><span class="line"><span class="built_in">string</span> s2 = ( s1 + <span class="string">","</span> ) + <span class="string">"world"</span>; </span><br><span class="line"><span class="comment">//错误，括号内的两个对象都是字面值，无法直接相加</span></span><br><span class="line"><span class="built_in">string</span> s3 = ( <span class="string">"Hello"</span> + <span class="string">","</span> ) + s2;</span><br></pre></td></tr></table></figure>
-<h5 id="处理string对象中的单个字符"><a href="#处理string对象中的单个字符" class="headerlink" title="处理string对象中的单个字符"></a>处理string对象中的单个字符</h5><h6 id="字符处理函数"><a href="#字符处理函数" class="headerlink" title="字符处理函数"></a>字符处理函数</h6><p><img src="https://upload-images.jianshu.io/upload_images/12312259-51b5a9d9f53a9e3d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="cctype"></p>
-<h6 id="range-for-语句"><a href="#range-for-语句" class="headerlink" title="$range for$ 语句"></a>$range for$ 语句</h6><figure class="highlight ada"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (declaration : <span class="type">expression</span>)</span><br><span class="line">    statement</span><br></pre></td></tr></table></figure>
-<p>range for是C++11中新增的简单遍历某个容器的循环语句</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//将某个string变为大写</span></span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s</span><span class="params">(<span class="string">"Hello World!!!"</span>)</span></span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> &amp;c:s)   <span class="comment">//需要引用类型才可以改变c的值</span></span><br><span class="line">    c = <span class="built_in">toupper</span>(c);</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; s &lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="动态绑定-dynamic-binding"><a href="#动态绑定-dynamic-binding" class="headerlink" title="动态绑定(dynamic binding)"></a>动态绑定(dynamic binding)</h4><p>当类的用户通过一个基类的引用或指针来调用一个虚函数的时候就会发生动态绑定</p>
+<p>因为在运行时才能确定这个基类的引用或指针所对应的对象的具体类型（可能是真的基类，或是它的派生类），然后会调用具体类型版本的虚函数，所以动态绑定又被称为运行时绑定(run-time binding)</p>
+<p>动态绑定是一种多态性的体现</p>
+<h3 id="定义派生类"><a href="#定义派生类" class="headerlink" title="定义派生类"></a>定义派生类</h3><p>派生类由类派生列表明确指出它是从哪个（哪些）基类继承而来的</p>
+<p>紧跟一个<code>:</code>   当由多个基类时基类之间用 <code>,</code> 分割</p>
+<h4 id="派生类列表-class-derivation-list"><a href="#派生类列表-class-derivation-list" class="headerlink" title="派生类列表(class derivation list)"></a>派生类列表(class derivation list)</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bulk_quote</span>:</span><span class="keyword">public</span> Quote&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">//override C++11</span></span><br><span class="line">	<span class="function"><span class="keyword">double</span> <span class="title">net_price</span><span class="params">(<span class="built_in">std</span>::<span class="keyword">size_t</span>)</span><span class="keyword">const</span> override</span>;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>override 显式地声明该函数将重写从基类继承而来的函数</p>
+</blockquote>
+<p>一个派生类对象分为多个部分：</p>
+<ol>
+<li>一个含有派生类自己定义的（非静态）成员的子对象</li>
+<li>一个与该派生类继承的基类对应的子对象（多继承则多对象）</li>
+</ol>
+<blockquote>
+<p>在一个对象中，继承自基类的部分和派生类自定义的部分不一定是连续存储的</p>
+</blockquote>
+<h3 id="访问控制继承"><a href="#访问控制继承" class="headerlink" title="访问控制继承"></a>访问控制继承</h3><p>类内的函数与成员分为三种级别的权限：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>public</th>
+<th style="text-align:left">公有</th>
+<th>类外也可以访问</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>protected</td>
+<td style="text-align:left">受保护的</td>
+<td>类外仅派生类可以访问</td>
+</tr>
+<tr>
+<td>private</td>
+<td style="text-align:left">私有</td>
+<td>仅仅本类的类内可以访问</td>
+</tr>
+</tbody>
+</table>
+</div>
 
             </div>
         
@@ -474,19 +501,19 @@
     
 <nav id="article-nav">
     
-        <a href="../../算法导论/C3函数的增长/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="../../../../../09/06/Note/Other/笔试9-5/" id="article-nav-newer" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Newer</strong>
             <div class="article-nav-title">
                 
-                    函数的增长
+                    常见题目Part1
                 
             </div>
         </a>
     
     
-        <a href="../../../../06/Note/C++ Primer/C1&2变量和基本类型/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="../../../../07/Note/算法导论/C3函数的增长/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">变量和基本类型</div>
+            <div class="article-nav-title">函数的增长</div>
         </a>
     
 </nav>
